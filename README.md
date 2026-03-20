@@ -1,6 +1,8 @@
 # This is a Weather APP built using React and Tailwind CSS.
-# We are using Open-Meteo API for the weather data.
-# We are using BigDataCloud API for the location data.
+
+
+## We are using Open-Meteo API for the weather data.
+## We are using BigDataCloud API for the location data.
 
 ### Since this project is containerized using docker, we need to build the image and run the container.
 ### To build the image, run the following command:
