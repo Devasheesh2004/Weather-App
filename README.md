@@ -6,15 +6,15 @@
 
 ### Since this project is containerized using docker, we need to build the image and run the container.
 ### To build the image, run the following command:
-### &nbsp &nbsp docker build -t weather-app .
+### &nbsp; &nbsp; docker build -t weather-app .
 ### To run the container, run the following command:
-### &nbsp &nbsp docker run -p 5173:5173 weather-app
+### &nbsp; &nbsp; docker run -p 5173:5173 weather-app
 
 #### To stop the container, run the following command:
-#### &nbsp &nbsp docker stop weather-app
+#### &nbsp; &nbsp; docker stop weather-app
 #### To remove the container, run the following command:
-#### &nbsp &nbsp docker rm weather-app
+#### &nbsp; &nbsp; docker rm weather-app
 #### To remove the image, run the following command:
-#### &nbsp &nbsp docker rmi weather-app
+#### &nbsp; &nbsp; docker rmi weather-app
 
 # THANK YOU
