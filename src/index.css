@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f172a;
+  --color-background-lighter: #1e293b;
+  --color-background-lightest: #334155;
+  
+  --color-primary: #38bdf8;
+  --color-primary-dark: #0284c7;
+  --color-primary-light: #7dd3fc;
+  
+  --color-accent-pink: #f472b6;
+  --color-accent-purple: #c084fc;
+  --color-accent-cyan: #22d3ee;
+
+  --font-sans: "Outfit", "Inter", "system-ui", "sans-serif";
+  
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-white antialiased overflow-x-hidden font-sans;
+  }
+
+  button, 
+  [role="button"],
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-hover {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .gradient-primary {
+    background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-accent-cyan));
+  }
+
+  .gradient-dark {
+    background-image: linear-gradient(to bottom, #0f172a, #0f172a, #000000);
+  }
+
+  .chart-scroll-container {
+    overflow-x: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .chart-scroll-container::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .weather-card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .weather-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+
+  .animate-in {
+    animation: var(--animate-fade-in);
+  }
+
+  .animate-slide-up {
+    animation: var(--animate-slide-up);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
