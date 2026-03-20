@@ -1,5 +1,7 @@
 # This is a Weather APP built using React and Tailwind CSS.
 
+# THIS WEBSITE IS LIVE ON RENDER @ - https://weather-app-njg2.onrender.com/
+
 
 ## We are using Open-Meteo API for the weather data.
 ## We are using BigDataCloud API for the location data.
